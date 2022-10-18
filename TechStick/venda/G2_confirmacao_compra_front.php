@@ -60,7 +60,7 @@
 		<h2>Resumo da compra</h2>
 		<hr>
 
-		<div class='table_prod'>
+		<div class='table_prod' id='conf_comp'>
 			<div class='row_prod'>
 				<div class='cell_prod cellDescricao_prod cellHeader_prod'>
 					Nome
@@ -102,33 +102,38 @@
 					</div>
 			<?php 
 				}  
-				echo "<h3>Total: R$ ".number_format($total, 2, ',', '.');".</h3>";
 			?>
 
-			<br><br>
-			<hr>
-
-			<h3>Deseja confirmar?</h3>
-			<a href="G2_finalizacao_compra_front.php" class="comp">Finalizar</a>
-			<a href="G2_carrinho_front.php" class="comp">Cancelar</a>&nbsp;&nbsp;
+            <div class='txt_confirma'>
+                <p>
+                    <?php echo "Total: R$".number_format($total, 2, ',', '.');?>
+                </p>
+                <hr>
+                <img src="../imagens/mascote.svg">
+                <div class="link_conf">
+                    <p>Deseja confirmar?</p>
+                    <a href="G2_finalizacao_compra_front.php" class="comp">FINALIZAR</a>
+                    <a href="G2_carrinho_front.php" class="comp">CANCELAR</a>
+                </div>
+            </div>
 		</div>
 		</div>
 		<footer>
         <div class="autores_footer">
                 <div class="autor">
-                    <p>03 - Breno Piccolo Bizeli</p>
+                    <p>03 - Breno Bizeli</p>
                 </div>
                 <div class="autor">
-                    <p>04 - Bruna Raissa Corrêa Moura</p>
+                    <p>04 - Bruna Moura</p>
                 </div>
                 <div class="autor">
-                    <p>19 - Letícia Manuela de Matos <br>Carvalho de Castro</p>
+                    <p>19 - Letícia de Castro</p>
                 </div>
                 <div class="autor">
-                    <p>21 - Marcela Amorin Peixoto</p>
+                    <p>21 - Marcela Amorin</p>
                 </div>
                 <div class="autor">
-                    <p>29 - Raissa Toassa Martinelli</p>
+                    <p>29 - Raissa Toassa</p>
                 </div>
             </div>
             <br> 

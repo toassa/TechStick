@@ -46,70 +46,104 @@
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         <div class="content">
             <a href="topo"></a>
-            <div class="novo">
-                <form action="G2_cad_novo_produtos_back.php" method="post">
-                    <h1>Cadastro de Produtos</h1>
-                    <!-- <div class="form_txt">
-                        <p>Nome do Produto:</p>
-                        <br><p>Descrição</p>
-                        <br><p>Estoque:</p>
-                        <br><p>Preço:</p>
-                        <br><p>Código Visual do Produto:</p>
-                        <br><p>Custo do Produto:</p>
-                        <br><p>Margem do Lucro:</p>
-                        <br><p>ICMS:</p>
-                        <br><p>Tipo de produto:</p>
-                        <br><br><br><br><p>Imagem do produto:</p>
-                        <br>
-                    </div> -->
+            <div class="form-container">
+                <div class="form-image">
+                    <img src="../../imagens/capa_form.png" alt="">
+                </div>
+                <div class="form">
+                    <form action="G2_cad_novo_produtos_back.php" method="post">
+                        <div class="form-header">
+                            <div class="title">
+                                <h1>Cadastro de produtos</h1>
+                            </div>
+                            <div class="login-button">
+                                <button><a href="../../venda/G2_selecao_produtos_front.php">PRODUTOS</a></button>
+                            </div>
+                        </div>
 
-                    <div class="form_campos">
-                        <input type="text" name="nome_produto"  id="nome_produto" maxlength="60" size="20" placeholder="Nome do produto" required><br><br>
-                        <input type="text" id="descricao" name="descricao" maxlength="60" size="20" placeholder="Descrição" required><br><br>
-                        <input type="text" name="estoque_produto" id="estoque" maxlength="3" size="20" placeholder="Estoque" required><br><br>
-                        <input type="text" name="preco" id="preco" maxlength="5"  size="20" placeholder="Preço" required ><br><br>
-                        <input type="text" name="codvisual" id="codigo" maxlength="12" size="20" placeholder="Código Visual" required><br><br>
-                        <input type="text" name="custo_produto" id="custo" maxlength="5" size="20" placeholder="Custo do Produto" required><br><br>
-                        <input type="text" name="margem_lucro" id="lucro" size="20" placeholder="Margem do Lucro" required><br><br>
-                        <input type="text" name="icms_produto" id="icms" size="20" placeholder="ICMS" required><br><br>
-                        
-                        <label class="container">Boton
-                            <input type="radio" checked="checked" name="tipo_produto" value="boton">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="container">Adesivo
-                            <input type="radio" name="tipo_produto" value="stick">
-                            <span class="checkmark"></span>
-                        </label>
-                        <input type="text" name="campo_imagem" id="imagem" maxlength="35" size="20" placeholder="Nome do arquivo" required><br><br> 
-                    </div> 
-                    <div class="form_btn">
-                        <a href="pos_log.php"><input type="submit" name="button" id="button" value="Enviar"></a>
-                        <input type="reset" name="btn" id="btn" value="Limpar">
+                        <div class="input-group">
+                            <div class="input-box">
+                                <label for="nome_prod">Nome <b>*</b></label>
+                                <input type="text" name="nome_produto"  id="nome_pro" maxlength="60" size="20" placeholder="Digite o nome do produto" required>
+                            </div>
+                            <div class="input-box">
+                                <label for="descricao">Descrição <b>*</b></label>
+                                <input type="text" id="descricao" name="descricao" maxlength="60" size="20" placeholder="Digite a descrição" required>
+                            </div>
+                            <div class="input-box">
+                                <label for="estoque_produto">Estoque </label>
+                                <input type="text" name="estoque_produto" id="estoque" maxlength="3" size="20" placeholder="Digite o estoque" required pattern="[0-9]+$" title="Insira apenas números">
+                            </div>
+                            <div class="input-box">
+                                <label for="preco">Preço <b>*</b></label>
+                                <input type="text" name="preco" id="preco" maxlength="5"  size="20" placeholder="Digite o preço" pattern="[0-9]+$" title="Insira apenas números" required>
+                            </div>
+                            <div class="input-box">
+                                <label for="codigo">Código visual <b>*</b></label>
+                                <input type="text" name="codvisual" id="codigo" maxlength="12" size="20" placeholder="Digite o código Visual" pattern="[0-9]+$" title="Insira apenas números" required>
+                            </div>
+                            <div class="input-box">
+                                <label for="custo">Custo <b>*</b></label>
+                                <input type="text" name="custo_produto" id="custo" maxlength="5" size="20" placeholder="Digite o custo do Produto" pattern="[0-9]+$" title="Insira apenas números" required>
+                            </div>
+                            <div class="input-box">
+                                <label for="lucro">Margem de lucro <b>*</b></label>
+                                <input type="text" name="margem_lucro" id="lucro" size="20" placeholder="Digite a margem de lucro" pattern="[0-9]+$" title="Insira apenas números" required>
+                            </div>
+                            <div class="input-box">
+                                <label for="icms">ICMS <b>*</b></label>
+                                <input type="text" name="icms_produto" id="icms" size="20" placeholder="Digite o ICMS" pattern="[0-9]+$" title="Insira apenas números" required>
+                            </div>
+                            <div class="input-box">
+                                <label for="imagem">Imagem do produto <b>*</b></label>
+                                <input type="text" name="campo_imagem" id="imagem" maxlength="35" size="20" placeholder="Digite o nome do arquivo" required>
+                            </div>
+                        </div>
+
+                        <div class="gender-inputs">
+                        <div class="input-box">
+                            <label>Tipo de produto <b>*</b></label>
+                        </div>
+
+                        <div class="gender-group">
+                            <div class="gender-input">
+                                <input type="radio" checked="checked" name="tipo_produto" id="boton" value="boton">
+                                <span class="checkmark"></span>
+                                <label for="boton">Boton</label>
+                            </div>
+
+                            <div class="gender-input">
+                                <input type="radio" id="stick" name="tipo_produto" value="stick">
+                                <span class="checkmark"></span>
+                                <label for="stick">Adesivo</label>
+                            </div>
+                        </div>
                     </div>
-                    <!-- <br><br><br><br><br><br><br><br> -->
-                </form>    
-            </div> 
+
+                        <div class="continue-button">
+                            <button><input type="submit" value="CADASTRAR"></button>
+                        </div>
+                    </form> 
+                </div>
+            </div>      
             <input type="button" value="Voltar" onclick="history.back()">
         </div>
-<br><br><br><br><br>
-
         <footer>
             <div class="autores_footer">
                 <div class="autor">
-                    <p>03 - Breno Piccolo Bizeli</p>
+                    <p>03 - Breno Bizeli</p>
                 </div>
                 <div class="autor">
-                    <p>04 - Bruna Raissa Corrêa Moura</p>
+                    <p>04 - Bruna Moura</p>
                 </div>
                 <div class="autor">
-                    <p>19 - Letícia Manuela de Matos <br>Carvalho de Castro</p>
+                    <p>19 - Letícia de Castro</p>
                 </div>
                 <div class="autor">
-                    <p>21 - Marcela Amorin Peixoto</p>
+                    <p>21 - Marcela Amorin</p>
                 </div>
                 <div class="autor">
-                    <p>29 - Raissa Toassa Martinelli</p>
+                    <p>29 - Raissa Toassa</p>
                 </div>
             </div>
             <br> 

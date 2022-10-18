@@ -40,7 +40,7 @@
        <!-- <a href="../index.html"><ion-icon name="home-outline"></ion-icon><span>Home</span></a> -->
        <!-- <a href="../cadastros/Produto/G2_cad_pesq_produtos_front.php"><ion-icon name="pencil-outline"></ion-icon><span>Cadastro</span></a> -->
        <a href="G2_selecao_produtos_front.php"><ion-icon name="bag-handle-outline"></ion-icon><span>Produtos</span></a>
-       <a href="../cadastros/Usuario/G2_cad_pesq_usuarios_front.php"><ion-icon name="person-add-outline"></ion-icon><span>Usuário</span></a>
+       <a href="../cadastros/Usuario/login_front.php"><ion-icon name="person-add-outline"></ion-icon><span>Usuário</span></a>
        <a href="G2_carrinho_front.php"><ion-icon name="cart-outline"></ion-icon><span>Carrinho</span></a>
        <a href="../utils/devs.html"><ion-icon name="people-circle-outline"></ion-icon><span>Devs</span></a>
         <a href="../utils/estast.html"><ion-icon name="stats-chart-outline"></ion-icon><span>Estatisticas</span></a>
@@ -58,7 +58,13 @@
             include "G2_finalizacao_compra_back.php";
 
             echo "<h1>Compra Finalizada com Sucesso!!!</h1>";
+            
         ?>
+          <center>
+          <div class="masc">
+          <img class="masc"src="../imagens/mascote.svg">
+        </div>
+        </center>
 
 <input type="button" value="Voltar" onclick="history.back()">
 <br><br>
@@ -67,19 +73,19 @@
         <footer>
         <div class="autores_footer">
                 <div class="autor">
-                    <p>03 - Breno Piccolo Bizeli</p>
+                    <p>03 - Breno Bizeli</p>
                 </div>
                 <div class="autor">
-                    <p>04 - Bruna Raissa Corrêa Moura</p>
+                    <p>04 - Bruna Moura</p>
                 </div>
                 <div class="autor">
-                    <p>19 - Letícia Manuela de Matos <br>Carvalho de Castro</p>
+                    <p>19 - Letícia de Castro</p>
                 </div>
                 <div class="autor">
-                    <p>21 - Marcela Amorin Peixoto</p>
+                    <p>21 - Marcela Amorin</p>
                 </div>
                 <div class="autor">
-                    <p>29 - Raissa Toassa Martinelli</p>
+                    <p>29 - Raissa Toassa</p>
                 </div>
             </div>
             <br> 

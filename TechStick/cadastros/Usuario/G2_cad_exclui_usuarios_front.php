@@ -43,80 +43,97 @@
                      <!--sidebar final-->
                      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
                      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+       <div class="content">
+            <a href="topo"></a>
 
-              <div class="content">
-                     <a href="topo"></a>
-                     <div class="exclui">
-                            <?php
-                                   $id_usuario = $_GET["id_usuario"];
-                                   include "G2_cad_getinfo_usuario_back.php"; 
-                            ?>
+              <?php
+                     $id_usuario = $_GET["id_usuario"];
+                     include "G2_cad_getinfo_usuario_back.php"; 
+              ?>
 
-                            <!-- Formulário (após as informações serem carregadas) -->
-                            <form action="G2_cad_exclui_usuarios_back.php" method="post">
-                            <h1>Confirmação: Exclusão dos Usuarios</h1>
-                            <div class="form_txt">
-                                   <p>ID do produto:</p>
-                                   <br><br><p>Nome do Usuario:</p>
-                                   <br><br><p>Email do Usuario:</p>
-                                   <br><br><p>Senha:</p>
-                                   <br><br><p>DDD:</p>
-                                   <br><br><p>Telefone:</p>
-                                   <br><br><p>CPF:</p>
+            <div class="form-container">
+                <div class="form-image">
+                    <img src="../../imagens/capa_form.png" alt="">
+                </div>
+                <div class="form">
+                    <form action="G2_cad_exclui_usuarios_back.php" method="post" class="novo_usu">
+                        <div class="form-header">
+                            <div class="title">
+                                <h1>Cadastre-se</h1>
                             </div>
-                            
-                            <div class="form_campos">
-                                   <input type="text" name="id_usuario" 
-                                          value="<?php echo $lacuna['id_usuario']; ?>" 
-                                          readonly><br><br><br>
-                                   <input type="text" name="nome_usuario" 
-                                          value="<?php echo $lacuna['nome']; ?>" 
-                                          readonly><br><br><br>
-                                   <input type="text" name="email" 
-                                          value="<?php echo $lacuna['email']; ?>" 
-                                          readonly><br><br><br>
-                                   <input type="text" name="Senha" 
-                                          value="<?php echo $lacuna['senha']; ?>" 
-                                          readonly><br><br><br>
-                                   <input type="text" name="ddd" 
-                                          value="<?php echo $lacuna['ddd']; ?>" 
-                                          readonly><br><br><br>
-                                   <input type="text" name="telefone" 
-                                          value="<?php echo $lacuna['telefone']; ?>" 
-                                          readonly><br><br><br>
-                                   <input type="text" name="cpf" 
-                                          value="<?php echo $lacuna['cpf']; ?>" 
-                                          readonly><br><br><br>
+                            <div class="login-button">
+                                <button><a href="G2_cad_altera_usuarios_front.php?id_usuario=<?php echo $id_usuario; ?>">EDITAR</a></button>
                             </div>
+                        </div>
 
-                            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                            <center>
-                                   <div class="form_btn">
-                                          <input type="submit" value="Excluir">
-                                          <input type="button" value="Editar" onclick="location.href='G2_cad_altera_usuarios_front.php?id_usuario=<?php echo $id_usuario ?>';">
-                                          <input type="button" value="Voltar" onclick="location.href='G2_cad_pesq_usuarios_front.php';">
-                                   </div>
-                            </center>
-					<br><br><br><br><br><br><br><br><br><br><br><br>
-                            </form>
- </div>
- <br><br><br><br><br>
- <footer>
+                        <div class="input-group">
+                            <div class="input-box">
+                                <label for="id_usu">ID do usuário</label>
+                                <input type="text" name="id_usuario" 
+                                   id="id_usu" value="<?php echo $lacuna['id_usuario']; ?>" 
+                                   readonly>
+                            </div>
+                            <div class="input-box">
+                                <label for="nome_usu">Nome</label>
+                                <input type="text" id="nome_usu" name="nome_usuario" 
+                                   value="<?php echo $lacuna['nome']; ?>" 
+                                   readonly>
+                            </div>
+                            <div class="input-box">
+                                <label for="email">E-mail</label>
+                                <input type="text" id="email" name="email" 
+                                   value="<?php echo $lacuna['email']; ?>" 
+                                   readonly>
+                            </div>
+                            <!-- <div class="input-box">
+                                <label for="senha">Senha</label>
+                                <input type="text" id="senha" name="Senha" 
+                                   value="<?php echo $lacuna['senha']; ?>" 
+                                   readonly>
+                            </div> -->
+                            <div class="input-box">
+                                <label for="ddd">DDD</label>
+                                <input type="text" name="ddd" 
+                                   value="<?php echo $lacuna['ddd']; ?>" 
+                                   id="ddd" readonly>
+                            </div>
+                            <div class="input-box">
+                                <label for="tel">Telefone</label>
+                                <input type="text" name="telefone" 
+                                   id="tel" value="<?php echo $lacuna['telefone']; ?>" 
+                                   readonly>
+                            </div>
+                            <div class="input-box">
+                                <label for="cpf">CPF</label>
+                                <input type="text" id="cpf" name="cpf" 
+                                   value="<?php echo $lacuna['cpf']; ?>" 
+                                   readonly>
+                            </div>
+                        </div>
+
+                        <div class="continue-button">
+                            <button><input type="submit" value="EXCLUIR"></button>
+                        </div>
+                    </form> 
+                </div>
+            </div>
+        </div>
+       <footer>
             <div class="autores_footer">
                 <div class="autor">
-                    <p>03 - Breno Piccolo Bizeli</p>
+                    <p>03 - Breno Bizeli</p>
                 </div>
                 <div class="autor">
-                    <p>04 - Bruna Raissa Corrêa Moura</p>
+                    <p>04 - Bruna Moura</p>
                 </div>
                 <div class="autor">
-                    <p>19 - Letícia Manuela de Matos <br>Carvalho de Castro</p>
+                    <p>19 - Letícia de Castro</p>
                 </div>
                 <div class="autor">
-                    <p>21 - Marcela Amorin Peixoto</p>
+                    <p>21 - Marcela Amorin</p>
                 </div>
                 <div class="autor">
-                    <p>29 - Raissa Toassa Martinelli</p>
+                    <p>29 - Raissa Toassa</p>
                 </div>
             </div>
             <br> 

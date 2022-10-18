@@ -83,6 +83,7 @@
                 </div>
                 <div class="prod_select">
                 <?php
+                
                     //display:grid --> display em grade, o esquema fica dinâmico
                   //  echo '<div style="display:grid; 
                                  //   grid-template-columns: repeat(3,300px); 
@@ -159,7 +160,8 @@
                             
                             //chamada do carrinho
                             // echo "<br> <a href='G2_carrinho_front.php?acao=add&id_produto=".$linha['id_produto']."' class='btn_prod'>COMPRAR</a>";
-                        echo "</div><br>";
+                     
+                            echo "</div><br>";
                     echo "</div>";
                     }
 
@@ -169,38 +171,41 @@
                 ?>
             </div>
             </div>
-            <?php
+             <?php
                 session_start();
-                if (isset($_SESSION["adm"]) && $_SESSION["adm"]==true)
+                if (isset($_SESSION['adm']) && $_SESSION['adm']=='t')
                 {
                     ?>
                     <div class="ver_mais" id="cadastro">
                 <a href="../cadastros/Produto/G2_cad_pesq_produtos_front.php" class="login">CADASTRO</a>
+                
             </div>
-                <?php
+               <?php
                 }
-            ?>
-            <!-- <div class="ver_mais" id="cadastro">
-                <a href="../cadastros/Produto/G2_cad_pesq_produtos_front.php" class="login">CADASTRO</a>
-            </div> -->
+                ?>
+              
+             
+            <!-- <div class="ver_mais" id="cadastro"> -->
+                <!-- <a href="../cadastros/Produto/G2_cad_pesq_produtos_front.php" class="login">CADASTRO</a> -->
+            <!-- </div> -->
         </div>
  		<br><br><br><br><br><br>
 	    <footer>
-        <div class="autores_footer">
+            <div class="autores_footer">
                 <div class="autor">
-                    <p>03 - Breno Piccolo Bizeli</p>
+                    <p>03 - Breno Bizeli</p>
                 </div>
                 <div class="autor">
-                    <p>04 - Bruna Raissa Corrêa Moura</p>
+                    <p>04 - Bruna Moura</p>
                 </div>
                 <div class="autor">
-                    <p>19 - Letícia Manuela de Matos <br>Carvalho de Castro</p>
+                    <p>19 - Letícia de Castro</p>
                 </div>
                 <div class="autor">
-                    <p>21 - Marcela Amorin Peixoto</p>
+                    <p>21 - Marcela Amorin</p>
                 </div>
                 <div class="autor">
-                    <p>29 - Raissa Toassa Martinelli</p>
+                    <p>29 - Raissa Toassa</p>
                 </div>
             </div>
             <br> 

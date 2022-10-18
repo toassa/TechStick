@@ -50,24 +50,21 @@
             <a href="topo"></a>
             <div class="link_novo">
                 <h1>Pesquisa de produtos</h1>
-
+                <a href='G2_cad_novo_produtos_front.php' class="link_novo">
+                    <strong>+</strong> NOVO
+                </a>
                
-                <?php
-                session_start();
-                if (isset($_SESSION["adm"]) && $_SESSION["adm"])
-                {
+                <!-- <?php
+                // session_start();
+                // if (isset($_SESSION["adm"]) && $_SESSION["adm"])
+                // {
                     ?>
                     <a href='G2_cad_novo_produtos_front.php' class="link_novo">
                         <strong>+</strong> NOVO
                      </a>
                 <?php
-                }
-            ?>
-              
-
-
-
-
+                // }
+            ?> -->
             </div>
             <?php
                 include "G2_cad_pesq_produtos_back.php";
@@ -147,22 +144,23 @@
                 echo "</div>";
             ?>
         </div>    
+        <br><br>
         <footer>
             <div class="autores_footer">
                 <div class="autor">
-                    <p>03 - Breno Piccolo Bizeli</p>
+                    <p>03 - Breno Bizeli</p>
                 </div>
                 <div class="autor">
-                    <p>04 - Bruna Raissa Corrêa Moura</p>
+                    <p>04 - Bruna Moura</p>
                 </div>
                 <div class="autor">
-                    <p>19 - Letícia Manuela de Matos <br>Carvalho de Castro</p>
+                    <p>19 - Letícia de Castro</p>
                 </div>
                 <div class="autor">
-                    <p>21 - Marcela Amorin Peixoto</p>
+                    <p>21 - Marcela Amorin</p>
                 </div>
                 <div class="autor">
-                    <p>29 - Raissa Toassa Martinelli</p>
+                    <p>29 - Raissa Toassa</p>
                 </div>
             </div>
             <br> 

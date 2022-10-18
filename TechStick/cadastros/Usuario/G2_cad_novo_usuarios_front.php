@@ -48,84 +48,71 @@
 
         <div class="content">
             <a href="topo"></a>
-        <div class="novo">
-                <!-- <img src="../../imagens/img_form.jpg" style="width: 450px; height: 500px;"> -->
-                <form action="G2_cad_novo_usuarios_back.php" method="post" class="novo_usu">
-                <div class="top_form">
-                    <h1>Cadastro de Usuarios</h1>
-                    <!-- <input type="button" value="ENTRAR"> -->
+            <div class="form-container">
+                <div class="form-image">
+                    <img src="../../imagens/capa_form.png" alt="">
                 </div>
-                <!-- <div class="form_txt">
-                <br>    
-                    <div class="form_left">
-                        <p>Nome do Usuario:</p><br>
-                        <input type="text" name="nome_usuario" placeholder="Nome" id="nome_usu" maxlength="60" size="20"  required>
-                        <br><br>
-                        <p>E-mail:</p><br>
-                        <input type="email" name="email" id="email" placeholder="E-mail" maxlength="60" size="20"  required>
-                        <p>Senha:</p><br>
-                        <input type="password" name="senha" id="senha" placeholder="Senha" maxlength="20" size="20"  required>
-                    </div>
-                    <br>
-                    <div class="form_right">
-                        
-                    </div> 
-                                   <p>Nome do Usuario:</p>
-                                   <br><br><p>E-mail:</p>
-                                   <br><br><p>Senha:</p>
-                                   <br><br><p>DDD:</p>
-                                   <br><br><p>Telefone:</p>
-                                   <br><br><p>CPF:</p>
-                    </div>-->
-                       
-                      <div class="form_campos">
-                        <p>*</p>
-                        <input type="text" name="nome_usuario" placeholder="Nome" id="nome_usu" maxlength="60" size="20"  required>
-                        <br><br><br>
-                        <p>*</p>
-                        <input type="email" name="email" id="email" placeholder="E-mail" maxlength="60" size="20"  required>
-                        <br><br><br>
-                        <p>*</p>
-                        <input type="password" name="senha" id="senha" placeholder="Senha" maxlength="20" size="20"  required>
-                        <br><br><br>
-                        <p>*</p>
-                        <input type="text" name="ddd" placeholder="DDD" maxlength="2" size="20"  required>
-                        <br><br><br>
-                        <p>*</p>
-                        <input type="text" name="telefone" placeholder="Telefone" maxlength="9" size="20"  required>
-                        <br><br><br>
-                        
-                        <input type="text" name="cpf" placeholder="CPF" maxlength="14" size="20"  required>
-                        
+                <div class="form">
+                    <form action="G2_cad_novo_usuarios_back.php" method="post" class="novo_usu">
+                        <div class="form-header">
+                            <div class="title">
+                                <h1>Cadastre-se</h1>
+                            </div>
+                            <div class="login-button">
+                                <button><a href="login_front.php">ENTRAR</a></button>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <div class="input-box">
+                                <label for="nome_usu">Nome <b>*</b></label>
+                                <input type="text" name="nome_usuario" placeholder="Digite seu nome" id="nome_usu" maxlength="60" size="20"  required>
+                            </div>
+                            <div class="input-box">
+                                <label for="email">E-mail <b>*</b></label>
+                                <input type="email" name="email" id="email" placeholder="Digite seu e-mail" maxlength="60" size="20"  required>
+                            </div>
+                            <div class="input-box">
+                                <label for="senha">Senha <b>*</b></label>
+                                <input type="password" name="senha" id="senha" placeholder="Digite sua senha" maxlength="20" size="20"  required>
+                            </div>
+                            <div class="input-box">
+                                <label for="ddd">DDD <b>*</b></label>
+                                <input type="text" name="ddd" id="ddd" placeholder="Digite seu DDD" maxlength="2" size="20" pattern="[0-9]+$" title="Insira apenas números" required>
+                            </div>
+                            <div class="input-box">
+                                <label for="tel">Telefone <b>*</b></label>
+                                <input type="text" name="telefone" id="tel" placeholder="Digite seu telefone" maxlength="9" size="20" pattern="[0-9]+$" title="Insira apenas números" required>
+                            </div>
+                            <div class="input-box">
+                                <label for="cpf">CPF</label>
+                                <input type="text" name="cpf" id="cpf" placeholder="Digite seu CPF" maxlength="14" size="20" pattern="[0-9]+$" title="Insira apenas números" required>
+                            </div>
+                        </div>
+
+                        <div class="continue-button">
+                            <button><input type="submit" value="CADASTRAR"></button>
+                        </div>
+                    </form> 
                 </div>
-                 
-                <div class="form_btn">
-                        <input type="submit" name="button" id="button" value="Enviar">  
-                      
-                        <input type="reset" name="btn" id="btn" value="Limpar"> 
-				 </div>
-                <br><br><br><br>  <br><br><br><br>
-                </form> 
             </div>
-            <!-- <input type="button" value="Voltar" onclick="history.back()"> -->
         </div>
-<br><br><br><br><br><br>
-<footer>
+        <footer>
             <div class="autores_footer">
                 <div class="autor">
-                    <p>03 - Breno Piccolo Bizeli</p>
+                    <p>03 - Breno Bizeli</p>
                 </div>
                 <div class="autor">
-                    <p>04 - Bruna Raissa Corrêa Moura</p>
+                    <p>04 - Bruna Moura</p>
                 </div>
                 <div class="autor">
-                    <p>19 - Letícia Manuela de Matos <br>Carvalho de Castro</p>
+                    <p>19 - Letícia de Castro</p>
                 </div>
                 <div class="autor">
-                    <p>21 - Marcela Amorin Peixoto</p>
+                    <p>21 - Marcela Amorin</p>
                 </div>
                 <div class="autor">
-                    <p>29 - Raissa Toassa Martinelli</p>
+                    <p>29 - Raissa Toassa</p>
                 </div>
             </div>
             <br> 

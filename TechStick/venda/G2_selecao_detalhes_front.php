@@ -141,23 +141,23 @@
         &nbsp; <input type="button" value="VOLTAR" onclick="history.back()">
 			<br><br><br><br><br><br>
             <footer>
-            <div class="autores_footer">
-                <div class="autor">
-                    <p>03 - Breno Piccolo Bizeli</p>
+                <div class="autores_footer">
+                    <div class="autor">
+                        <p>03 - Breno Bizeli</p>
+                    </div>
+                    <div class="autor">
+                        <p>04 - Bruna Moura</p>
+                    </div>
+                    <div class="autor">
+                        <p>19 - Letícia de Castro</p>
+                    </div>
+                    <div class="autor">
+                        <p>21 - Marcela Amorin</p>
+                    </div>
+                    <div class="autor">
+                        <p>29 - Raissa Toassa</p>
+                    </div>
                 </div>
-                <div class="autor">
-                    <p>04 - Bruna Raissa Corrêa Moura</p>
-                </div>
-                <div class="autor">
-                    <p>19 - Letícia Manuela de Matos <br>Carvalho de Castro</p>
-                </div>
-                <div class="autor">
-                    <p>21 - Marcela Amorin Peixoto</p>
-                </div>
-                <div class="autor">
-                    <p>29 - Raissa Toassa Martinelli</p>
-                </div>
-            </div>
             <br> 
 	        <div class="sub_footer">
             <div class="icone_footer">

@@ -48,6 +48,8 @@
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
         <div class="content">
+       
+
             <a href="topo"></a>
             <div class="login_dec">
                 <center>
@@ -63,38 +65,37 @@
                         
                         <br><br>
                         <div class="btn_login">
-                            <input type="submit" name="button" id="button" value="Enviar">  
-                            <input type="reset" name="btn" id="btn" value="Limpar"> 
-                         
-                        </div>
-                    </form>
-                    <br><br><br><br>
-                    <div class="links_login">
+                            <input type="submit" name="button" id="button" value="Entrar"> 
+                            <input type="reset" name="btn" id="btn" value="Limpar">
+                        <!-- </div>
+                        <div class="links_login"> -->
+                            <br><br>
                         <p>Ainda não tem uma conta? <a href="G2_cad_novo_usuarios_front.php" class="login">Cadastre-se</a></p>
-                        <p>Confira os usuários já cadastrados: <a href="G2_cad_pesq_usuarios_front.php" class="login">Acessar</a></p>
-                        <br><br><a href="login_out.php" class="logout">SAIR</a> 
-                    
+                        <!-- <p>Confira os usuários já cadastrados: <a href="G2_cad_pesq_usuarios_front.php" class="login">Acessar</a></p> -->
+                        <!-- <br><br><button><a href="login_out.php" class="logout">SAIR</a></button> -->
+                        <br><button><a href="login_out.php">SAIR</a></button>
                         
                     </div>
+                    </form>
                 </center>
             </div>
         </div>
         <footer>
             <div class="autores_footer">
                 <div class="autor">
-                    <p>03 - Breno Piccolo Bizeli</p>
+                    <p>03 - Breno Bizeli</p>
                 </div>
                 <div class="autor">
-                    <p>04 - Bruna Raissa Corrêa Moura</p>
+                    <p>04 - Bruna Moura</p>
                 </div>
                 <div class="autor">
-                    <p>19 - Letícia Manuela de Matos <br>Carvalho de Castro</p>
+                    <p>19 - Letícia de Castro</p>
                 </div>
                 <div class="autor">
-                    <p>21 - Marcela Amorin Peixoto</p>
+                    <p>21 - Marcela Amorin</p>
                 </div>
                 <div class="autor">
-                    <p>29 - Raissa Toassa Martinelli</p>
+                    <p>29 - Raissa Toassa</p>
                 </div>
             </div>
             <br> 
