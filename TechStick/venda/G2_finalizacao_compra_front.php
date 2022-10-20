@@ -54,19 +54,20 @@
             <a href="topo"></a>
             <?php
             session_start();
-            $id_usuario = 1; // Depois precisamos alterar para pegar da $_SESSION
+            $id_usuario = $_SESSION['usulogado']['id_usuario'];// Depois precisamos alterar para pegar da $_SESSION
             include "G2_finalizacao_compra_back.php";
 
             echo "<h1>Compra Finalizada com Sucesso!!!</h1>";
             
         ?>
-          <center>
-          <div class="masc">
-          <img class="masc"src="../imagens/mascote.svg">
-        </div>
-        </center>
+        <center>
+            <div class="masc">
+                <img class="masc"src="../imagens/mascote.svg">
+            </div>
 
-<input type="button" value="Voltar" onclick="history.back()">
+            <h2>Muito obrigado por comprar na Tech Stick!</h2><br><br>
+            <a href="../index.html" class="link_fina">VOLTAR</a>
+        </center>
 <br><br>
         </div>
 

@@ -54,13 +54,26 @@
             <div class="login_dec">
                 <center>
                     <h1>Login</h1>
-                    
-                    <div class="links_login">
+                    <?php
+                session_start();
+                if (isset($_SESSION['adm']) && $_SESSION['adm']=='t')
+                {
+                    ?>
+                     <div class="links_login">
                         <p>Confira os usuários já cadastrados: <a href="G2_cad_pesq_usuarios_front.php" class="login">Acessar</a></p>
-                        <a href="login_out.php" class="logout">SAIR</a>
+                
+            </div>
+               <?php
+                }
+                ?>
+                    
+
+                        <!-- <p>Confira os usuários já cadastrados: <a href="G2_cad_pesq_usuarios_front.php" class="login">Acessar</a></p> -->
+                        <br>
+                        <div class="btn_login"><button><a href="login_out.php">SAIR</a></button></div>
                     
                         
-                    </div>
+                  
                 </center>
             </div>
         </div>

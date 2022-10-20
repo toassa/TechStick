@@ -48,75 +48,76 @@
        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-        <div class="content">
+        <div class="content" id="confirma_id">
             <a href="topo"></a>
-		<?php
-			//session_start();
-			$idusuario = 1; // Depois precisamos alterar para pegar da $_SESSION
-			include "G2_confirmacao_compra_back.php";
-		?>
+            <?php
+                //session_start();
+                $idusuario = 1; // Depois precisamos alterar para pegar da $_SESSION
+                include "G2_confirmacao_compra_back.php";
+            ?>
 
-		<hr>
-		<h2>Resumo da compra</h2>
-		<hr>
+            <br>
+            <!-- <br><hr class="hr_conf"> -->
+            <h2>Resumo da compra</h2>
+            <!-- <hr class="hr_conf"> -->
 
-		<div class='table_prod' id='conf_comp'>
-			<div class='row_prod'>
-				<div class='cell_prod cellDescricao_prod cellHeader_prod'>
-					Nome
-				</div>
-				<div class='cell_prod cellPreco_prod cellHeader_prod'>
-					Preço
-				</div>
-				<div class='cell_prod cellPreco_prod cellHeader_prod'>
-					Qtde.
-				</div>
-				<div class='cell_prod cellPreco_prod cellHeader_prod'>
-					Subtotal
-				</div>
-			</div>
+            <div class='table_prod' id='conf_comp'>
+                <div class='row_prod'>
+                    <div class='cell_prod cellDescricao_prod cellHeader_prod'>
+                        Nome
+                    </div>
+                    <div class='cell_prod cellPreco_prod cellHeader_prod'>
+                        Preço
+                    </div>
+                    <div class='cell_prod cellPreco_prod cellHeader_prod'>
+                        Quantidade
+                    </div>
+                    <div class='cell_prod cellPreco_prod cellHeader_prod'>
+                        Subtotal
+                    </div>
+                </div>
 
-			<?php
-				$total = 0.0;
+                <?php
+                    $total = 0.0;
 
-				// Criar linhas com os dados dos produtos
+                    // Criar linhas com os dados dos produtos
 
-				foreach ((array)$resultado_lista as $linha)
-				{ 
-					$idprod = $linha['id_produto'];
-					$total += floatval($linha['subtotal']);
-			?>
-					<div class='row_prod'>
-						<div class='cell_prod cellDescricao_prod'>
-							<?php echo $linha['nome']; ?>
-						</div>
-						<div class='cell_prod cellPreco_prod'>
-							<?php echo $linha['preco']; ?>
-						</div>
-						<div class='cell_prod cellPreco_prod'>
-							<?php echo $linha['quantidade']; ?>
-						</div>
-						<div class='cell_prod cellPreco_prod'>
-							<?php echo $linha['subtotal']; ?>
-						</div>
-					</div>
-			<?php 
-				}  
-			?>
+                    foreach ((array)$resultado_lista as $linha)
+                    { 
+                        $idprod = $linha['id_produto'];
+                        $total += floatval($linha['subtotal']);
+                ?>
+                        <div class='row_prod'>
+                            <div class='cell_prod cellDescricao_prod'>
+                                <?php echo $linha['nome']; ?>
+                            </div>
+                            <div class='cell_prod cellPreco_prod'>
+                                <?php echo $linha['preco']; ?>
+                            </div>
+                            <div class='cell_prod cellPreco_prod'>
+                                <?php echo $linha['quantidade']; ?>
+                            </div>
+                            <div class='cell_prod cellPreco_prod'>
+                                <?php echo $linha['subtotal']; ?>
+                            </div>
+                        </div>
+                <?php 
+                    }  
+                ?>
 
-            <div class='txt_confirma'>
-                <p>
-                    <?php echo "Total: R$".number_format($total, 2, ',', '.');?>
-                </p>
-                <hr>
-                <img src="../imagens/mascote.svg">
-                <div class="link_conf">
-                    <p>Deseja confirmar?</p>
-                    <a href="G2_finalizacao_compra_front.php" class="comp">FINALIZAR</a>
-                    <a href="G2_carrinho_front.php" class="comp">CANCELAR</a>
+                <div class='txt_confirma'>
+                    <p>
+                        <?php echo "Total: R$ ".number_format($total, 2, ',', '.');?>
+                    </p>
+                    <hr class="hr_conf2">
+                    <center><img src="../imagens/mascoteduvida.svg"></center>
+                    <div class="link_conf">
+                        <p>Deseja confirmar?</p>
+                        <a href="G2_finalizacao_compra_front.php" class="comp">FINALIZAR</a>
+                        <a href="G2_carrinho_front.php" class="comp">CANCELAR</a>
+                    </div>
                 </div>
             </div>
-		</div>
 		</div>
 		<footer>
         <div class="autores_footer">

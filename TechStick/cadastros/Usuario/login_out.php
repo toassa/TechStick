@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-    if (isset($_SESSION["usualogado"]))
+    if (isset($_SESSION["usulogado"]))
     {
         session_unset();
         session_destroy();

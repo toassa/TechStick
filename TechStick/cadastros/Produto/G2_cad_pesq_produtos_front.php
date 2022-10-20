@@ -78,7 +78,7 @@
                 // Começar tabela e criar o cabeçalho
                 echo "
                 <div class='table_prod'>
-                    <div class='row_prod2'>
+                    <div class='row_prod'>
                         <div class='cell_prod cellID_prod cellHeader_prod'>
                             ID:
                         </div>
@@ -116,7 +116,7 @@
                     foreach ($resultado_lista as $lacuna)
                     {
                         echo "
-                        <div class='row_prod'>
+                        <div class='row_prod1'>
                             <div class='cell_prod cellID_prod'>
                                 ".$lacuna['id_produto']."
                             </div>

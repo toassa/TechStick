@@ -5,6 +5,8 @@
 
     $email_login = $_POST["nome_usuario"];
     $senhacripto = MD5($_POST["senha"]);
+
+
     
     //$senha = md5($senha); //ou se a senha estiver oculta
     $sql = "SELECT * from usuarios where email= '$email_login' and senha = '$senhacripto'; ";

@@ -162,7 +162,7 @@
 	        <div class="sub_footer">
             <div class="icone_footer">
                     <a href="../index.html" ><ion-icon name="home-outline"></ion-icon></a>
-                    <a href="venda/G2_selecao_produtos_front.php" ><ion-icon name="bag-handle-outline"></ion-icon></a>
+                    <a href="G2_selecao_produtos_front.php" ><ion-icon name="bag-handle-outline"></ion-icon></a>
                     <a href="../cadastros/Usuario/login_front.php"><ion-icon name="person-add-outline"></ion-icon></a>
                     <a href="#topo" class="vt">Voltar ao topo</a>
                     </div>	

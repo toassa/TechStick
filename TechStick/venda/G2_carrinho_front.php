@@ -76,27 +76,10 @@
 				}
 
 				include "G2_carrinho_back.php";
+				if($qtde == 0){
+					echo "<h2>O carrinho de compras está vazio!</h2>";
+				}else{
 			?>
-
-			<!-- <div class='table_carrinho'>
-				<div class='row_carrinho'>
-					<div class='cell_carrinho cellNome_carrinho cellHeader_carrinho'>
-						Nome
-					</div>
-					<div class='cell_carrinho cellPreco_carrinho cellHeader_carrinho'>
-						Preço
-					</div>
-					<div class='cell_carrinho cellPreco_carrinho cellHeader_carrinho'>
-						Qtde.
-					</div>
-					<div class='cell_carrinho cellPreco_carrinho cellHeader_carrinho'>
-						Subtotal
-					</div>
-					<div class='cell_carrinho cellAcoes_carrinho'>
-						&nbsp;
-					</div>
-				</div> -->
-
 				<form name="myForm" id="myForm" target="_myFrame" action="?acao=up" method="post" >
 					<div class="envio_carras">
 						<input type="submit" value="Atualizar"/>
@@ -150,21 +133,7 @@
 						<a href="G2_confirmacao_compra_front.php" class="link_carras">FINALIZAR COMPRA</a>
 						
 				</form>
-				<!-- <script type="text/javascript">
-					window.onload=function(){
-						var auto = setTimeout(function(){ autoRefresh(); }, 100);
-
-						function submitform(){
-						alert('test');
-						document.forms["myForm"].submit();
-						}
-
-						function autoRefresh(){
-						clearTimeout(auto);
-						auto = setTimeout(function(){ submitform(); autoRefresh(); }, 10000);
-						}
-					}
-					</script> -->
+				<?php } ?>
 			</div>	
 		</div>
 

@@ -535,8 +535,14 @@ a.link_novo:hover{
 .row_prod { 
     display:block;
     width: 100%;
-    /* margin-left: 15%; */
 }
+
+.row_prod1 { 
+    display:block;
+    width: 100%;
+    margin-left: 22%;
+}
+
 .cell_prod {
     display:inline-block;
     padding: 5px 5px;
@@ -555,7 +561,7 @@ a.link_novo:hover{
 }
 .cellID_prod {width:40px; }
 .cellDescricao_prod {width:24rem; word-wrap: break-word;}
-.cellPreco_prod {width:70px; text-align:right;}
+.cellPreco_prod {width:90px; text-align:right;}
 /* .cellCV_prod {width:120px; }
 .cellCusto_prod {width:70px; text-align:right; }
 .cellMLucro_prod {width:70px;text-align:right; }
@@ -970,6 +976,24 @@ input, select, textarea {
     }
 }
 
+a.link_fina:link, a.link_fina:visited, a.link_fina:active{
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: #00686c;
+    padding: 5px;
+    border: 2px solid #ff9915;
+    border-radius: 5px; 
+    margin-top: 100px;
+    /* margin-left: 155px; */
+}
+
+a.link_fina:hover{
+    text-decoration: underline;
+    /* background-color: #D9D9D9; */
+    transition: 0.2s;
+}
+
 /*.novo{
     margin-top: 25px;
     justify-content: center;
@@ -1189,13 +1213,29 @@ a.vt:link, a.vt:visited, a.vt:hover, a.vt:active {
     margin-right: 10%;
 }
 
+#confirma_id h2{
+    font-size: 20px;
+}
+
 .txt_confirma{
     width: 100%;
     justify-content: center;
 }
 
 .txt_confirma img{
-    width: 100%;
+    width: 50%;
+}
+
+hr.hr_conf{
+    border: 1px solid #fad928;
+    border-radius: 5px;
+    margin: 20px 0px;
+}
+
+hr.hr_conf2{
+    border: 1px solid #00686c;
+    border-radius: 5px;
+    margin: 20px 0px;
 }
 
 .txt_confirma p{
@@ -1755,12 +1795,57 @@ section:nth-of-type(1){
 .masc {
     margin-left: auto;
     margin-right: auto;
-    height: 700px;
+    width: 40%;
 }
 
 img .masc {
     margin-left: auto;
     margin-right: auto;
-    height: 500px;
+}
 
+.ver_mais p{
+    margin-top: 1px;
+    color: #ff9915;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: left;
+    margin: 5px 12%;
+}
+
+.ver_mais p a:hover{
+    cursor: pointer;
+    color: #159F84;
+}
+
+.ver_mais input{
+    background-color: #d9d9d9;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 1px solid #d9d9d9;
+    padding: 2px;
+    /* color: #00686c;
+    font-weight: bold; */
+}
+
+.ver_mais input:hover{
+    cursor: pointer;
+    background-color: #eeeeee75;
+    border: 1px solid #eeeeee75;
+}
+
+.ver_mais button{
+    background-color: #d9d9d9;
+    border-radius: 5px;
+    border: 1px solid #d9d9d9;
+    padding: 2px;
+}
+
+.ver_mais button a{
+    text-decoration: none;
+    color: #ff0000;
+    font-size: 16px;
+}
+
+.ver_mais button a:hover{
+    background-color: #eeeeee75;
 }

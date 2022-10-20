@@ -53,6 +53,15 @@
             <a href="topo"></a>
             <div class="login_dec">
                 <center>
+                 <?php session_start(); 
+    if (isset($_SESSION['usulogado']))
+    {
+        header("location:pos_log.php");
+        return;
+    }
+
+
+         ?>
                     <h1>Login</h1>
                     <form action="login_back.php" method="post">
                         <input type="text" name="nome_usuario" id="nome_usu" maxlength="60" size="20" placeholder="E-mail" required>
@@ -73,7 +82,7 @@
                         <p>Ainda não tem uma conta? <a href="G2_cad_novo_usuarios_front.php" class="login">Cadastre-se</a></p>
                         <!-- <p>Confira os usuários já cadastrados: <a href="G2_cad_pesq_usuarios_front.php" class="login">Acessar</a></p> -->
                         <!-- <br><br><button><a href="login_out.php" class="logout">SAIR</a></button> -->
-                        <br><button><a href="login_out.php">SAIR</a></button>
+                        <!-- <br><button><a href="login_out.php">SAIR</a></button> -->
                         
                     </div>
                     </form>
