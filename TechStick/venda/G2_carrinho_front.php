@@ -54,6 +54,46 @@
 			<div class="icone_carrinho">
 			<a href="G2_selecao_produtos_front.php"><ion-icon name="arrow-up-circle-outline"></ion-icon></a>&nbsp;&nbsp;
 			</div>
+
+			<?php
+            session_start();
+            if (!isset($_SESSION['usulogado']))
+            {        
+				echo "<script type='text/javascript'>
+					alert('Você nao está logado(a)! Por favor faça o login ou cadastre-se!!!');
+					window.location = '../cadastros/Usuario/login_front.php';
+				</script>";
+						
+			}
+			// header("location:../cadastros/Usuario/login_front.php");
+		 	// 	return;
+			// <p>Clique no botão para exibir a caixa de confirmação.</p>
+
+			// <button onclick="funcao1()">Clique aqui</button>
+
+			// <p id="demo"></p>
+
+			// <script>
+			// function funcao1()
+			// {
+			// var x;
+			// var r=confirm("Escolha um valor!");
+			// if (r==true)
+			//   {
+			//   x="você pressionou OK!";
+			//   }
+			// else
+			//   {
+			//   x="Você pressionou Cancelar!";
+			//   }
+			// document.getElementById("demo").innerHTML=x;
+			// }
+			// </script>
+
+
+        ?>
+
+
 			<?php
 			/*
 			Extraído de:
@@ -63,10 +103,12 @@
 			Adaptado por Profa. Ariane Scarelli para banco de dados PostgreSQL (ago/2016)
 			Adaptado por Prof. Victor rodrigues (ago/2022)
 			*/
-				//session_start();
+				session_start();
 				$acao = $_GET['acao'] ?? '';
 				$idproduto = $_GET['id_produto'] ?? 0;
-				$idusuario = 1; // Depois precisamos alterar para pegar da $_SESSION
+				  $idusuario = $_SESSION['usulogado']['id_usuario'];
+				  //1; // Depois precisamos alterar para pegar da $_SESSION
+				//  $id_usuario = $_SESSION['usulogado']['id_usuario'];
 
 				if ($acao=='up') {
 					if (is_array($_POST['prods']))

@@ -12,7 +12,9 @@
               on c.id_produto = p.id_produto
            WHERE c.id_usuario = $idusuario
            ORDER BY p.descricao;";*/
-    $idusuario=1;
+   
+  $idusuario = $_SESSION['usulogado']['id_usuario'];
+
     $sql="SELECT c.*,
         p.preco,
         c.quantidade * p.preco as subtotal,

@@ -79,6 +79,7 @@
                 echo "<option value='boton'"; if ($final=="boton"){ echo "selected";} echo ">Botons</option>";
                 echo "<option value='stick'"; if ($final=="stick"){ echo "selected";} echo ">Adesivos</option>";
                 echo "</select>"; ?>
+           
 
                 </div>
                 <div class="prod_select">
@@ -177,9 +178,8 @@
                 {
                     ?>
                     <div class="ver_mais" id="cadastro">
-                <a href="../cadastros/Produto/G2_cad_pesq_produtos_front.php" class="login">CADASTRO</a>
-                
-            </div>
+                        <a href="../cadastros/Produto/G2_cad_pesq_produtos_front.php" class="login">CADASTRO</a>
+                    </div>
                <?php
                 }
                 ?>

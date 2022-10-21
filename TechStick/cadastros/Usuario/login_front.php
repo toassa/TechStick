@@ -55,7 +55,7 @@
                 <center>
                  <?php session_start(); 
     if (isset($_SESSION['usulogado']))
-    {
+    {        
         header("location:pos_log.php");
         return;
     }

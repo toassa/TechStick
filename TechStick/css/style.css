@@ -1531,8 +1531,48 @@ a.btn_prod:hover{
     font-size: 16px;
 }
 
+.links_login label{
+    /* font-weight: bold; */
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.links_login ion-icon{
+    color: #ff9915;
+    font-size: 20px;
+}
+
+.img_login img{
+    width: 50%;
+}
+
+/* ALTERAR LOGIN ADM
+.img_login {
+    width: 35%;
+    float: left;
+}
+
+.img_login img {
+    width: 39%;
+    float: right;
+    margin-right: -66px;
+}
+
+.login_dec {
+    border: 3px solid #32c2b9;
+    margin: 8% 0px;
+    margin-right: 10%;
+    width: 40%;
+    float: right;
+    border-radius: 20px;
+    padding: 2%;
+    box-shadow: 2px 6px 15px #32c2b9;
+}
+*/
+
 a.login:link, a.login:visited, a.login:active{
-    font-weight: bold;
+    /* font-weight: bold; */
     color: #00686c;
     text-decoration: none;
     font-size: 14px;
@@ -1540,6 +1580,7 @@ a.login:link, a.login:visited, a.login:active{
 
 a.login:hover{
     cursor: pointer;
+    text-decoration: underline;
 }
 
 a.logout:link, a.logout:visited, a.logout:active{
@@ -1557,12 +1598,11 @@ a.logout:hover{
 }
 
 .btn_login p{
-    margin-top: 1px;
+    margin-top: 5px;
     color: #ff9915;
     font-weight: bold;
     font-size: 14px;
-    text-align: left;
-    margin: 5px 12%;
+    text-align: center;
 }
 
 .btn_login p a:hover{

@@ -11,9 +11,9 @@
         //$id_usuario = $linha['id_usuario'];
         // $id_usuario = 2;
         //$id_produto = $linha['id_produto'];
-         $id_produto = 1;
+        //  $id_produto = 1;
 
-
+       
         // Realizar as validações com os produtos aqui
         if($resultado_lista)
             foreach($resultado_lista as $linha)
@@ -46,11 +46,12 @@
 
     session_start();
     $resultado_lista = $_SESSION['produtos'];
+    $id_usuario = $_SESSION['usulogado']['id_usuario'];
 
     // validarProdutos($resultado_lista); 
     
     $sql = "INSERT INTO venda (id_venda, id_usuario, data_hora_venda, excluido_venda) VALUES (DEFAULT, $id_usuario, NOW(), 'false');";
-    // echo "$sql";
+     //echo "$sql";
 
     $res = pg_query($conecta, $sql);
     $qtdLinhas = pg_affected_rows($res);
@@ -102,6 +103,7 @@
         // echo '</script>';
 
     // Limpar carrinho
+    // echo $id_usuario;
     $sql="DELETE FROM carrinho
             where id_usuario = $id_usuario;"; 
     pg_query($conecta,$sql);

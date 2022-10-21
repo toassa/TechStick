@@ -54,18 +54,25 @@
             <a href="topo"></a>
             <?php
             session_start();
-            $id_usuario = $_SESSION['usulogado']['id_usuario'];// Depois precisamos alterar para pegar da $_SESSION
-            include "G2_finalizacao_compra_back.php";
+            if (!isset($_SESSION['usulogado']))
+            {        
+                echo "<h1>Por favor faça o login ou cadastre-se!!!</h1>";
+            }
+            //  $id_usuario = $_SESSION['usulogado']['id_usuario']; // Depois precisamos alterar para pegar da $_SESSION
+            else {
+                include "G2_finalizacao_compra_back.php";
 
             echo "<h1>Compra Finalizada com Sucesso!!!</h1>";
-            
+            echo "<h2>Muito obrigado por comprar na Tech Stick!</h2>";
+            }
         ?>
         <center>
             <div class="masc">
                 <img class="masc"src="../imagens/mascote.svg">
             </div>
 
-            <h2>Muito obrigado por comprar na Tech Stick!</h2><br><br>
+            <!-- <h2>Muito obrigado por comprar na Tech Stick!</h2><br><br> -->
+            <br><br>
             <a href="../index.html" class="link_fina">VOLTAR</a>
         </center>
 <br><br>

@@ -51,8 +51,11 @@
         <div class="content" id="confirma_id">
             <a href="topo"></a>
             <?php
-                //session_start();
-                $idusuario = 1; // Depois precisamos alterar para pegar da $_SESSION
+                session_start();
+                // $idusuario = 1; // Depois precisamos alterar para pegar da $_SESSION
+                $idusuario = $_SESSION['usulogado']['id_usuario'];
+               
+                //  $id_usuario = $_SESSION['usulogado']['id_usuario'];
                 include "G2_confirmacao_compra_back.php";
             ?>
 

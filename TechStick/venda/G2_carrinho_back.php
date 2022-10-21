@@ -1,6 +1,14 @@
 
 <?php
     include "../utils/conexao_g2.php"; 
+    
+
+            
+     $idusuario = $_SESSION['usulogado']['id_usuario'];
+   
+
+
+
 
     // Verifica se o produto já está no carrinho
     function getQtdeProdutoCarrinho($conecta, $idusuario, $idproduto) {

@@ -48,24 +48,33 @@
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
         <div class="content">
-            
-            
             <a href="topo"></a>
+            <div class="img_login">
+                <img src="../../imagens/desenhoapoiando.svg">
+            </div>
             <div class="login_dec">
                 <center>
-                    <h1>Login</h1>
                     <?php
                 session_start();
                 if (isset($_SESSION['adm']) && $_SESSION['adm']=='t')
                 {
                     ?>
-                     <div class="links_login">
-                        <p>Confira os usuários já cadastrados: <a href="G2_cad_pesq_usuarios_front.php" class="login">Acessar</a></p>
-                
-            </div>
+                    <div class="links_login">
+                        <script language="javascript">
+                            alert('Você está logado(a) como Tech Adm');
+                        </script>
+                        <h1>Seja bem-vindo(a) Tech Adm!</h1>
+                        <hr><br><br>
+                        <label><ion-icon name="folder-outline"></ion-icon>Acesse os <a href="G2_cad_pesq_usuarios_front.php" class="login">usuários cadastrados</a></label><br>
+                        <label><ion-icon name="folder-outline"></ion-icon>Acesse os <a href="../Produto/G2_cad_pesq_produtos_front.php" class="login">produtos cadastrados</a></label>
+                    </div>
                <?php
-                }
+                }else{
                 ?>
+                    <div class="links_login">
+
+                    </div>
+                <?php } ?>
                     
 
                         <!-- <p>Confira os usuários já cadastrados: <a href="G2_cad_pesq_usuarios_front.php" class="login">Acessar</a></p> -->
