@@ -45,6 +45,10 @@
                      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
        <div class="content">
             <a href="topo"></a>
+            <div class="voltar_btn" id="volta_pos">
+                <ion-icon name="return-down-back-outline" type="button" onclick="history.back()"></ion-icon>
+                <!-- <input type="button" value="Voltar" onclick="history.back()"> -->
+            </div>
 
               <?php
                      $id_usuario = $_GET["id_usuario"];

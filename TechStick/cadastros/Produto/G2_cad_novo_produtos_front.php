@@ -126,7 +126,9 @@
                     </form> 
                 </div>
             </div>      
-            <input type="button" value="Voltar" onclick="history.back()">
+            <div class="voltar_btn">
+                <input type="button" value="Voltar" onclick="history.back()">
+            </div>
         </div>
         <footer>
             <div class="autores_footer">

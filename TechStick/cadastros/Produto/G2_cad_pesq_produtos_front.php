@@ -48,8 +48,12 @@
 
         <div class="content">
             <a href="topo"></a>
-            <div class="link_novo">
+            <div class="link_novo" id="novo_prod">
                 <h1>Pesquisa de produtos</h1>
+                <div class="voltar_btn" id="volta_neg">
+                        <ion-icon name="return-down-back-outline" type="button" onclick="history.back()"></ion-icon>
+                        <!-- <input type="button" value="Voltar" onclick="history.back()"> -->
+                    </div>
                 <a href='G2_cad_novo_produtos_front.php' class="link_novo">
                     <strong>+</strong> NOVO
                 </a>

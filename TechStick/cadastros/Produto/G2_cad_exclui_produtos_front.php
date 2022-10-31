@@ -46,6 +46,10 @@
 
               <div class="content">    
               <a href="topo"></a>
+                     <div class="voltar_btn" id="volta_pos">
+                        <ion-icon name="return-down-back-outline" type="button" onclick="history.back()"></ion-icon>
+                        <!-- <input type="button" value="Voltar" onclick="history.back()"> -->
+                    </div>
               <div class="form-container">
                      <div class="form-image">
                             <img src="../../imagens/capa_form.png" alt="">

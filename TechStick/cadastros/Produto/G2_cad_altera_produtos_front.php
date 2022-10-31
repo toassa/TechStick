@@ -44,11 +44,15 @@
                      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
                      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-              <div class="content">
+            <div class="content">
                      <a href="topo"></a>
-              <div class="form-container">
+                     <div class="voltar_btn" id="volta_pos">
+                        <ion-icon name="return-down-back-outline" type="button" onclick="history.back()"></ion-icon>
+                        <!-- <input type="button" value="Voltar" onclick="history.back()"> -->
+                    </div>
+            <div class="form-container">
                 <div class="form-image">
-                    <img src="../../imagens/capa_form.png" alt="">
+                    <!-- <img src="../../imagens/capa_form.png" alt=""> -->
                 </div>
                 <div class="form">
                      <!-- Recuperando as informações do produto -->
@@ -87,22 +91,22 @@
                             <div class="input-box">
                                 <label for="estoque_produto">Estoque </label>
                                 <input type="text" id="estoque_produto" name="estoque_produto" 
-                                   value="<?php echo $lacuna['estoque']; ?>" pattern="[0-9]+$" title="Insira apenas números">
+                                   value="<?php echo $lacuna['estoque']; ?>">
                             </div>
                             <div class="input-box">
                                 <label for="preco">Preço  </label>
                                 <input type="text" id="preco" name="preco" 
-                                   value="<?php echo $lacuna['preco']; ?>" pattern="[0-9]+$" title="Insira apenas números">
+                                   value="<?php echo $lacuna['preco']; ?>"  >
                             </div>
                             <div class="input-box">
                                 <label for="codigo">Código visual  </label>
                                 <input type="text" name="codvisual" 
-                                   value="<?php echo $lacuna['codigovisual']; ?>" id="codigo" pattern="[0-9]+$" title="Insira apenas números">
+                                   value="<?php echo $lacuna['codigovisual']; ?>" id="codigo"  >
                             </div>
                             <div class="input-box">
                                 <label for="custo">Custo  </label>
                                 <input type="text" id="custo" name="custo_produto" 
-                                   value="<?php echo $lacuna['custo']; ?>" pattern="[0-9]+$" title="Insira apenas números">
+                                   value="<?php echo $lacuna['custo']; ?>"  >
                             </div>
                             <div class="input-box">
                                 <label for="lucro">Margem de lucro  </label>
@@ -112,7 +116,7 @@
                             <div class="input-box">
                                 <label for="icms">ICMS  </label>
                                 <input type="text" id="icms" name="icms_produto" 
-                                   value="<?php echo $lacuna['icms']; ?>" pattern="[0-9]+$" title="Insira apenas números">
+                                   value="<?php echo $lacuna['icms']; ?>"  >
                             </div>
                             <div class="input-box">
                                 <label for="imagem">Imagem do produto  </label>
@@ -154,7 +158,8 @@
                         </div>
                     </form> 
                 </div>
-            </div>  
+            </div>
+            </div>
        <footer>
             <div class="autores_footer">
                 <div class="autor">

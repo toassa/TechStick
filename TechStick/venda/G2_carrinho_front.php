@@ -51,6 +51,10 @@
         <div class="content">
 			<a href="topo"></a>
 			<h1>CARRINHO</h1>
+			<div class="voltar_btn" id="volta_neg">
+                <ion-icon name="return-down-back-outline" type="button" onclick="history.back()"></ion-icon>
+                <!-- <input type="button" value="Voltar" onclick="history.back()"> -->
+            </div>
 			<div class="icone_carrinho">
 			<a href="G2_selecao_produtos_front.php"><ion-icon name="arrow-up-circle-outline"></ion-icon></a>&nbsp;&nbsp;
 			</div>
@@ -176,10 +180,8 @@
 						
 				</form>
 				<?php } ?>
-			</div>	
+			</div>
 		</div>
-
-		<!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
 		<footer>
 		<div class="autores_footer">
                 <div class="autor">

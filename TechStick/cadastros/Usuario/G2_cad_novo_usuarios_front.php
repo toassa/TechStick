@@ -48,6 +48,10 @@
 
         <div class="content">
             <a href="topo"></a>
+            <div class="voltar_btn" id="volta_pos">
+                <ion-icon name="return-down-back-outline" type="button" onclick="history.back()"></ion-icon>
+                <!-- <input type="button" value="Voltar" onclick="history.back()"> -->
+            </div>
             <div class="form-container">
                 <div class="form-image">
                     <img src="../../imagens/capa_form.png" alt="">
@@ -86,7 +90,7 @@
                             </div>
                             <div class="input-box">
                                 <label for="cpf">CPF</label>
-                                <input type="text" name="cpf" id="cpf" placeholder="Digite seu CPF" maxlength="14" size="20" pattern="[0-9]+$" title="Insira apenas números" required>
+                                <input type="text" name="cpf" id="cpf" placeholder="Digite seu CPF" maxlength="14" size="20" pattern="[0-9]+$" title="Insira apenas números">
                             </div>
                         </div>
 

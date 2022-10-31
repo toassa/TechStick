@@ -49,40 +49,41 @@
 
         <div class="content">
             <a href="topo"></a>
+            <div class="voltar_btn" id="volta_pos">
+                <ion-icon name="return-down-back-outline" type="button" onclick="history.back()"></ion-icon>
+                <!-- <input type="button" value="Voltar" onclick="history.back()"> -->
+            </div>
             <div class="img_login">
                 <img src="../../imagens/desenhoapoiando.svg">
             </div>
-            <div class="login_dec">
+            <div class="login_dec" id="post_log">
                 <center>
                     <?php
-                session_start();
-                if (isset($_SESSION['adm']) && $_SESSION['adm']=='t')
-                {
+			        session_start();
+                    if (isset($_SESSION['adm']) && $_SESSION['adm']=='t')
+                    {
+                        ?>
+                        <div class="links_login">
+                            <script language="javascript">
+                                alert('Você está logado(a) como Tech Adm');
+                            </script>
+                            <h1>Seja bem-vindo(a) Tech Adm!</h1>
+                            <hr><br><br>
+                            <label><ion-icon name="folder-outline"></ion-icon>Acesse os <a href="G2_cad_pesq_usuarios_front.php" class="login">usuários cadastrados</a></label><br><br>
+                            <label><ion-icon name="folder-outline"></ion-icon>Acesse os <a href="../Produto/G2_cad_pesq_produtos_front.php" class="login">produtos cadastrados</a></label>
+                        </div>
+                <?php
+                    }else{
                     ?>
-                    <div class="links_login">
-                        <script language="javascript">
-                            alert('Você está logado(a) como Tech Adm');
-                        </script>
-                        <h1>Seja bem-vindo(a) Tech Adm!</h1>
-                        <hr><br><br>
-                        <label><ion-icon name="folder-outline"></ion-icon>Acesse os <a href="G2_cad_pesq_usuarios_front.php" class="login">usuários cadastrados</a></label><br>
-                        <label><ion-icon name="folder-outline"></ion-icon>Acesse os <a href="../Produto/G2_cad_pesq_produtos_front.php" class="login">produtos cadastrados</a></label>
-                    </div>
-               <?php
-                }else{
-                ?>
-                    <div class="links_login">
-
-                    </div>
-                <?php } ?>
-                    
-
-                        <!-- <p>Confira os usuários já cadastrados: <a href="G2_cad_pesq_usuarios_front.php" class="login">Acessar</a></p> -->
-                        <br>
-                        <div class="btn_login"><button><a href="login_out.php">SAIR</a></button></div>
-                    
-                        
-                  
+                        <div class="links_login">
+                        <?php     			
+                            echo "<h1>Seja bem Vindo(a)!!</h1>
+                            Nossa empresa existe para que o público infantojuvenil possa expressar sua cultura e personalidade através da personalização de instrumentos por adesivos e bottons os quais tangiam-se entre as mais mais amplas temáticas, proporcionando um estado de satisfação pessoal a todos os clientes.<br><br><br>
+                            <a href='../../venda/G2_selecao_produtos_front.php' class='btn_prod'>Acesse nossos produtos</a><br><br>";
+                        ?>
+                        </div>
+                    <?php } ?>
+                    <div class="btn_login"><button><a href="login_out.php">SAIR</a></button></div>
                 </center>
             </div>
         </div>

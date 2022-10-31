@@ -53,6 +53,10 @@
         <div class="content">
             <a href="topo"></a>
             <h1>Seleção de produtos</h1>
+            <div class="voltar_btn" id="volta_neg">
+                <ion-icon name="return-down-back-outline" type="button" onclick="history.back()"></ion-icon>
+                <!-- <input type="button" value="Voltar" onclick="history.back()"> -->
+            </div>
             <div class="produtos_visual">
                 <?php 
                     include "G2_selecao_produtos_back.php";
@@ -125,9 +129,6 @@
                                     <div><p>".$linha['estoque']." em estoque</p></div>";
                                     echo "<br> <a href='G2_carrinho_front.php?acao=add&id_produto=".$linha['id_produto']."' class='btn_prod'>COMPRAR</a>";
                                 }
-                                
-                                //chamada do carrinho
-                                // echo "<br> <a href='G2_carrinho_front.php?acao=add&id_produto=".$linha['id_produto']."' class='btn_prod'>COMPRAR</a>";
                             echo "</div><br>";
                         echo "</div>";
                     }
@@ -143,25 +144,21 @@
                             </div>
 
                             <div>
-                                <div><p>".$linha['nome']."</p></div>
-                                <div><p>R$ ".$preco."</p></div>";
+                                <div class='nome_prod'><p>".$linha['nome']."</p></div>";
 
                             if ($linha['estoque']<=0)
                             {
-                                echo "
-                                <div><span style='color:red'>Produto esgotado</span></div>";
+                                echo "<br>
+                                <div class='esgotado_prod'><span>Produto esgotado</span></div>";
                                 echo "<br> <a href='G2_carrinho_front.php?acao=add&id_produto=".$linha['id_produto']."' class='btn_prod' id='esgotado' disabled>COMPRAR</a>";
                             }
                             else
                             {
+                                echo "<div class='preco_prod'><p>R$ ".$preco."</p></div>";
                                 echo "
-                                <div><p>".$linha['estoque']." em estoque</p></div>";
-                                echo "<br> <a href='G2_carrinho_front.php?acao=add&id_produto=".$linha['id_produto']."' class='btn_prod'>COMPRAR</a>";
+                                <div class='estoque_prod'><p>".$linha['estoque']." em estoque</p></div>";
+                                echo "<br><a href='G2_carrinho_front.php?acao=add&id_produto=".$linha['id_produto']."' class='btn_prod'>COMPRAR</a>";
                             }
-                            
-                            //chamada do carrinho
-                            // echo "<br> <a href='G2_carrinho_front.php?acao=add&id_produto=".$linha['id_produto']."' class='btn_prod'>COMPRAR</a>";
-                     
                             echo "</div><br>";
                     echo "</div>";
                     }
@@ -183,13 +180,7 @@
                <?php
                 }
                 ?>
-              
-             
-            <!-- <div class="ver_mais" id="cadastro"> -->
-                <!-- <a href="../cadastros/Produto/G2_cad_pesq_produtos_front.php" class="login">CADASTRO</a> -->
-            <!-- </div> -->
         </div>
- 		<br><br><br><br><br><br>
 	    <footer>
             <div class="autores_footer">
                 <div class="autor">

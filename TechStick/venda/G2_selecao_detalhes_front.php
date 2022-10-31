@@ -53,6 +53,11 @@
         <div class="content">
             <a href="topo"></a>
             <h1>Seleção detalhes</h1>
+            <div class="voltar_btn" id="volta_neg">
+                <ion-icon name="return-down-back-outline" type="button" onclick="history.back()"></ion-icon>
+                <!-- <input type="button" value="Voltar" onclick="history.back()"> -->
+            </div>
+
             <!-- Recuperando as informações do produto -->
             <?php
                 $id_produto = $_GET["id"];
@@ -63,7 +68,6 @@
 
                 <div class="selecao_detalhes_img">
                     <img src="../imagens/<?php  echo $lacuna['campo_imagem']; ?>.png">
-                    <!-- <img src='../imagens/ex_boton.jpg'/> -->
                 </div>
 
                 <div class="selecao_detalhes_txt">
@@ -74,14 +78,30 @@
                       <br><br> 
                      <p id="preco_detalhes">R$ <?php echo number_format($lacuna['preco'], 2, ',', '.'); ?></p>
                      <br><br>
+                     <?php if ($lacuna['estoque']<=0)
+                            {
+                                echo "
+                                <div class='esgotado'><span>Produto esgotado</span></div>";
+                            }
+                            else
+                            {
+                                echo "
+                                <div class='estoque'><p>".$lacuna['estoque']." em estoque</p></div>";
+                            }
+                            ?>
                 </div>
-                <center>
-                     <div class="selecao_detalhes_btn">
-                            <a href ='G2_carrinho_front.php?acao=add&id_produto=<?php echo $id_produto; ?>' class="btn_form">COMPRAR</a>
-                     </div>
-                </center>
+                <div class="comp_det">
+                     <?php if ($lacuna['estoque']<=0)
+                            {
+                                echo "<br> <a href='G2_carrinho_front.php?acao=add&id_produto=".$lacuna['id_produto']."' class='comp' id='esgotado' disabled>COMPRAR</a>";
+                            }
+                            else
+                            {
+                                echo "<br> <a href='G2_carrinho_front.php?acao=add&id_produto=".$lacuna['id_produto']."' class='comp'>COMPRAR</a>";
+                            }
+                            ?>
+                </div>
             </div>
-        </div>
 
         <!-- <?php
             // $sql="SELECT * FROM produtos WHERE excluido_produto='false' ORDER BY nome;";
@@ -137,9 +157,8 @@
             </center>
             </div>
         </div>
-
-        &nbsp; <input type="button" value="VOLTAR" onclick="history.back()">
-			<br><br><br><br><br><br>
+		</div>
+        <br><br>
             <footer>
                 <div class="autores_footer">
                     <div class="autor">

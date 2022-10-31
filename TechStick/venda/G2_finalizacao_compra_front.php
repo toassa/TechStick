@@ -73,11 +73,11 @@
 
             <!-- <h2>Muito obrigado por comprar na Tech Stick!</h2><br><br> -->
             <br><br>
-            <a href="../index.html" class="link_fina">VOLTAR</a>
+            <a href="../index.html" class="voltar_btn">VOLTAR</a>
         </center>
 <br><br>
         </div>
-
+            
         <footer>
         <div class="autores_footer">
                 <div class="autor">
